@@ -1,0 +1,44 @@
+Ext.define('Two21G.view.StatusForm', {
+    extend: 'Ext.form.Panel',
+    xtype: 'statusform',
+requires:['Ext.field.Select','Ext.form.FieldSet'],
+config:{
+	items:[
+		{
+xtype: 'fieldset',
+                items: [{
+                   xtype: 'selectfield',
+                    label: 'Visa Type',
+name:'visaType',
+                    options: [
+                        {text: 'First Option',  value: 'first'},
+                        {text: 'Second Option', value: 'second'}
+                    ]
+
+                },
+		{
+		    xtype: 'selectfield',
+                    label: 'Location',
+name:'location',
+                    options: [
+                        {text: 'First Option',  value: 'first'},
+                        {text: 'Second Option', value: 'second'}
+                    ]
+		},
+		 {
+                    xtype: 'textfield',
+                    name: 'casenumber',
+                    label: 'CaseNumber'
+                },
+		{
+		 xtype: 'button',               
+                 label: 'Submit',
+		 action:'getStatus'
+		}
+] 
+
+
+			}
+		]
+}	
+});
