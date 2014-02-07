@@ -1,0 +1,422 @@
+21351|updatePanel|ctl00_ContentPlaceHolder1_UpdatePanel1|
+            <div id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_UpdatePanel1">
+	
+        <div id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_pnlStatus" class="application-status" style="display:none;">
+		
+            <div class="status-content">
+                <div class="title">
+                    <span class="dos">U.S. Department of State</span><br />
+                    <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblAppName" class="app-name">NONIMMIGRANT VISA APPLICATION</span>
+                </div>
+                <div class="status">
+                    <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblStatus">Administrative Processing</span>
+                </div>
+
+                <table>
+                    <tr>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblCaseTitle">Application ID or Case Number</span>:</td>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblCaseNo" class="case-number">AA003M1UDI</span></td>
+                    </tr>                    
+                    <tr>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblSubmitDateTitle">Case Creation Date:</span></td>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblSubmitDate">29-Oct-2013</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblStatusDateTitle">Status Updated Date:</span></td>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblStatusDate">31-Oct-2013</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <br />
+
+                <div style="clear:both; max-height:150px; overflow:auto;">
+                    <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblMessage">Your visa case is currently undergoing necessary administrative processing.  This processing can take several weeks.  Please follow any instructions provided by the Consular Officer at the time of your interview. If further information is needed, you will be contacted.  If your visa application is approved, it will be processed and mailed/available within two business days.</span>
+                    <div class="translation">
+                        <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblTranslation"></span>
+                    </div>                    
+                
+
+                    <div style="display:none;border:dotted 1px #c2c2c2; padding:10px 10px; margin-bottom:10px;">
+                         
+                
+                        
+                    </div><br />
+
+                    <div>
+                        <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblInfo">For more information, please visit </span>
+                        <a id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lnkContactUrl" href="http://chennai.usconsulate.gov" target="_blank">U.S. Consulate General Chennai.</a>
+                    </div>      
+                </div><br />  
+            </div>    
+
+                      
+
+            <div style="width:600px !important; text-align:center;">
+                <a id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lnkCloseInbox" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$ucApplicationStatusView$lnkCloseInbox&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Close</a>
+            </div>
+        
+	</div> 
+
+        <a href="Views/#" id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_anchorModalActivate"></a>
+         
+    
+</div>
+
+            <div id="ctl00_ContentPlaceHolder1_pnlSearch" class="travel1" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_ContentPlaceHolder1_btnSubmit')">
+	
+                <h2>Visa Status Check</h2>
+ 
+
+                <div id="ctl00_ContentPlaceHolder1_ValidationSummary1" class="error-message" style="color:Red;background-color:White;display:none;">
+
+	</div>
+
+                <div>
+                    <span id="ctl00_ContentPlaceHolder1_lblWelcome">Welcome! On this website, you can check your U.S. visa application status.</span>
+                </div><br />
+                                    
+                <div>
+                    <span id="ctl00_ContentPlaceHolder1_lblError" style="color:Red;"></span>
+                </div>         <br />           
+                                                                                                                              
+                <div class="fieldset-group" style="width:420px!important;">
+                <fieldset>
+                    <div id="ctl00_ContentPlaceHolder1_upProgress" style="display:none;">
+		
+                            <div>
+                                <img id="ctl00_ContentPlaceHolder1_imgProgress" src="_res/img/icon_progress.gif" alt="Processing" style="border-width:0px;" />
+                            </div>
+                        
+	</div>
+                    <div class="field-groups">
+                        <div class="field full">       
+                            <span id="ctl00_ContentPlaceHolder1_lblAppType">Visa Application Type</span> <br />                    
+                            <select name="ctl00$ContentPlaceHolder1$ddlApplications" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlApplications\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ddlApplications">
+		<option value="IV">IMMIGRANT VISA (IV)</option>
+		<option selected="selected" value="NIV">NONIMMIGRANT VISA (NIV)</option>
+
+	</select>
+                        </div>   
+
+                        <h6>
+                            <span id="ctl00_ContentPlaceHolder1_lblInstruction">Please select a location and enter your Application ID or Case Number.</span>
+                        </h6>
+
+                        <div class="field full search-alt" style="width:400px!important;">
+                            <div id="ctl00_ContentPlaceHolder1_pnlLocation">
+		
+                                <span id="ctl00_ContentPlaceHolder1_lblLocation">Select a location</span>
+                                <span id="ctl00_ContentPlaceHolder1_CustomValidator1" style="color:Red;visibility:hidden;"><img alt="Error" src="_res/img/trg_bk.gif" /></span><br />
+                                <select name="ctl00$ContentPlaceHolder1$ddlLocation" id="ctl00_ContentPlaceHolder1_ddlLocation">
+			<option value="">- SELECT ONE -</option>
+			<option value="KBL">AFGHANISTAN, KABUL</option>
+			<option value="TIA">ALBANIA, TIRANA</option>
+			<option value="ALG">ALGERIA, ALGIERS</option>
+			<option value="LUA">ANGOLA, LUANDA</option>
+			<option value="BNS">ARGENTINA, BUENOS AIRES</option>
+			<option value="YRV">ARMENIA, YEREVAN</option>
+			<option value="MLB">AUSTRALIA, MELBOURNE</option>
+			<option value="PRT">AUSTRALIA, PERTH</option>
+			<option value="SYD">AUSTRALIA, SYDNEY</option>
+			<option value="VNN">AUSTRIA, VIENNA</option>
+			<option value="BKU">AZERBAIJAN, BAKU</option>
+			<option value="NSS">BAHAMAS, NASSAU</option>
+			<option value="MNA">BAHRAIN, MANAMA</option>
+			<option value="DHK">BANGLADESH, DHAKA</option>
+			<option value="BGN">BARBADOS, BRIDGETOWN</option>
+			<option value="MSK">BELARUS, MINSK</option>
+			<option value="BRS">BELGIUM, BRUSSELS</option>
+			<option value="BLZ">BELIZE, BELMOPAN</option>
+			<option value="COT">BENIN, COTONOU</option>
+			<option value="HML">BERMUDA, HAMILTON</option>
+			<option value="LPZ">BOLIVIA, LA PAZ</option>
+			<option value="SAR">BOSNIA-HERZEGOVINA, SARAJEVO</option>
+			<option value="GAB">BOTSWANA, GABORONE</option>
+			<option value="BRA">BRAZIL, BRASILIA</option>
+			<option value="RCF">BRAZIL, RECIFE</option>
+			<option value="RDJ">BRAZIL, RIO DE JANEIRO</option>
+			<option value="SPL">BRAZIL, SAO PAULO</option>
+			<option value="BSB">BRUNEI, BANDAR SERI BEGAWAN</option>
+			<option value="SOF">BULGARIA, SOFIA</option>
+			<option value="OUG">BURKINA FASO, OUAGADOUGOU</option>
+			<option value="RNG">BURMA, RANGOON</option>
+			<option value="BUJ">BURUNDI, BUJUMBURA</option>
+			<option value="PIA">CABO VERDE, PRAIA</option>
+			<option value="PHP">CAMBODIA, PHNOM PENH</option>
+			<option value="YDE">CAMEROON, YAOUNDE</option>
+			<option value="CLG">CANADA, CALGARY</option>
+			<option value="HLF">CANADA, HALIFAX</option>
+			<option value="MTL">CANADA, MONTREAL</option>
+			<option value="OTT">CANADA, OTTAWA</option>
+			<option value="QBC">CANADA, QUEBEC</option>
+			<option value="TRT">CANADA, TORONTO</option>
+			<option value="VAC">CANADA, VANCOUVER</option>
+			<option value="NDJ">CHAD, N`DJAMENA</option>
+			<option value="SNT">CHILE, SANTIAGO</option>
+			<option value="BEJ">CHINA, BEIJING</option>
+			<option value="CHE">CHINA, CHENGDU</option>
+			<option value="GUZ">CHINA, GUANGZHOU</option>
+			<option value="SHG">CHINA, SHANGHAI</option>
+			<option value="SNY">CHINA, SHENYANG</option>
+			<option value="BGT">COLOMBIA, BOGOTA</option>
+			<option value="BRZ">CONGO, BRAZZAVILLE</option>
+			<option value="KIN">CONGO, KINSHASA</option>
+			<option value="SNJ">COSTA RICA, SAN JOSE</option>
+			<option value="ABJ">COTE D`IVORIE, ABIDJAN</option>
+			<option value="ZGB">CROATIA, ZAGREB</option>
+			<option value="HAV">CUBA, HAVANA</option>
+			<option value="NCS">CYPRUS, NICOSIA</option>
+			<option value="PRG">CZECH REPUBLIC, PRAGUE</option>
+			<option value="CPN">DENMARK, COPENHAGEN</option>
+			<option value="DJI">DJIBOUTI, DJIBOUTI</option>
+			<option value="SDO">DOMINICAN REPUBLIC, SANTO DOMINGO</option>
+			<option value="GYQ">ECUADOR, GUAYAQUIL</option>
+			<option value="QTO">ECUADOR, QUITO</option>
+			<option value="CRO">EGYPT, CAIRO</option>
+			<option value="SNS">EL SALVADOR, SAN SALVADOR</option>
+			<option value="LND">ENGLAND, LONDON</option>
+			<option value="MBO">EQUATORIAL GUINEA, MALABO</option>
+			<option value="ASM">ERITREA, ASMARA</option>
+			<option value="TAL">ESTONIA, TALLINN</option>
+			<option value="ADD">ETHIOPIA, ADDIS ABABA</option>
+			<option value="SUV">FIJI, SUVA</option>
+			<option value="HLS">FINLAND, HELSINKI</option>
+			<option value="PRS">FRANCE, PARIS</option>
+			<option value="LIB">GABON, LIBREVILLE</option>
+			<option value="BAN">GAMBIA, BANJUL</option>
+			<option value="TBL">GEORGIA, TBILISI</option>
+			<option value="BRL">GERMANY, BERLIN</option>
+			<option value="FRN">GERMANY, FRANKFURT</option>
+			<option value="MUN">GERMANY, MUNICH</option>
+			<option value="ACC">GHANA, ACCRA</option>
+			<option value="ATH">GREECE, ATHENS</option>
+			<option value="GTM">GUATEMALA, GUATEMALA CITY</option>
+			<option value="GEO">GUYANA, GEORGETOWN</option>
+			<option value="PTP">HAITI, PORT-AU-PRINCE</option>
+			<option value="TGG">HONDURAS, TEGUCIGALPA</option>
+			<option value="HNK">HONG KONG</option>
+			<option value="BDP">HUNGARY, BUDAPEST</option>
+			<option value="RKJ">ICELAND, REYKJAVIK</option>
+			<option selected="selected" value="MDR">INDIA, CHENNAI</option>
+			<option value="HYD">INDIA, HYDERABAD</option>
+			<option value="CLC">INDIA, KOLKATA</option>
+			<option value="BMB">INDIA, MUMBAI</option>
+			<option value="NWD">INDIA, NEW DELHI</option>
+			<option value="JAK">INDONESIA, JAKARTA</option>
+			<option value="SRB">INDONESIA, SURABAYA</option>
+			<option value="BGH">IRAQ, BAGHDAD</option>
+			<option value="ERB">IRAQ, ERBIL</option>
+			<option value="DBL">IRELAND, DUBLIN</option>
+			<option value="TLV">ISRAEL, TEL AVIV</option>
+			<option value="FLR">ITALY, FLORENCE</option>
+			<option value="MLN">ITALY, MILAN</option>
+			<option value="NPL">ITALY, NAPLES</option>
+			<option value="RME">ITALY, ROME</option>
+			<option value="KNG">JAMAICA, KINGSTON</option>
+			<option value="FKK">JAPAN, FUKUOKA</option>
+			<option value="NHA">JAPAN, NAHA</option>
+			<option value="KBO">JAPAN, OSAKA</option>
+			<option value="SPP">JAPAN, SAPPORO</option>
+			<option value="TKY">JAPAN, TOKYO</option>
+			<option value="JRS">JERUSALEM</option>
+			<option value="AMM">JORDAN, AMMAN</option>
+			<option value="ATA">KAZAKHSTAN, ALMATY</option>
+			<option value="AST">KAZAKHSTAN, ASTANA</option>
+			<option value="NRB">KENYA, NAIROBI</option>
+			<option value="KWT">KUWAIT, KUWAIT CITY</option>
+			<option value="BKK">KYRGYZSTAN, BISHKEK</option>
+			<option value="VNT">LAOS, VIENTIANE</option>
+			<option value="RGA">LATVIA, RIGA</option>
+			<option value="BRT">LEBANON, BEIRUT</option>
+			<option value="MAS">LESOTHO, MASERU</option>
+			<option value="MRV">LIBERIA, MONROVIA</option>
+			<option value="VIL">LITHUANIA, VILNIUS</option>
+			<option value="LXM">LUXEMBOURG, LUXEMBOURG</option>
+			<option value="SKO">MACEDONIA, SKOPJE</option>
+			<option value="ANT">MADAGASCAR, ANTANANARIVO</option>
+			<option value="LIL">MALAWI, LILONGWE</option>
+			<option value="KLL">MALAYSIA, KUALA LUMPUR</option>
+			<option value="BAM">MALI, BAMAKO</option>
+			<option value="VLL">MALTA, VALLETTA</option>
+			<option value="MAJ">MARSHALL ISLANDS, MAJURO</option>
+			<option value="NUK">MAURITANIA, NOUAKCHOTT</option>
+			<option value="PTL">MAURITIUS, PORT LOUIS</option>
+			<option value="CDJ">MEXICO, CIUDAD JUAREZ</option>
+			<option value="GDL">MEXICO, GUADALAJARA</option>
+			<option value="HER">MEXICO, HERMOSILLO</option>
+			<option value="MTM">MEXICO, MATAMOROS</option>
+			<option value="MER">MEXICO, MERIDA</option>
+			<option value="MEX">MEXICO, MEXICO CITY</option>
+			<option value="MTR">MEXICO, MONTERREY</option>
+			<option value="NGL">MEXICO, NOGALES</option>
+			<option value="NVL">MEXICO, NUEVO LAREDO</option>
+			<option value="TJN">MEXICO, TIJUANA</option>
+			<option value="KOL">MICRONESIA, KOLONIA</option>
+			<option value="CHS">MOLDOVA, CHISINAU</option>
+			<option value="ULN">MONGOLIA, ULAANBAATAR</option>
+			<option value="POD">MONTENEGRO, PODGORICA</option>
+			<option value="CSB">MOROCCO, CASABLANCA</option>
+			<option value="MAP">MOZAMBIQUE, MAPUTO</option>
+			<option value="WHK">NAMIBIA, WINDHOEK</option>
+			<option value="KDU">NEPAL, KATHMANDU</option>
+			<option value="AMS">NETHERLANDS, AMSTERDAM</option>
+			<option value="USN">NEW YORK, NY - USA</option>
+			<option value="ACK">NEW ZEALAND, AUCKLAND</option>
+			<option value="MNG">NICARAGUA, MANAGUA</option>
+			<option value="NMY">NIGER, NIAMEY</option>
+			<option value="ABU">NIGERIA, ABUJA</option>
+			<option value="LGS">NIGERIA, LAGOS</option>
+			<option value="BLF">NORTHERN IRELAND, BELFAST</option>
+			<option value="OSL">NORWAY, OSLO</option>
+			<option value="MST">OMAN, MUSCAT</option>
+			<option value="ISL">PAKISTAN, ISLAMABAD</option>
+			<option value="KRC">PAKISTAN, KARACHI</option>
+			<option value="KOR">PALAU, KOROR</option>
+			<option value="PNM">PANAMA, PANAMA CITY</option>
+			<option value="PTM">PAPUA NEW GUINEA, PORT MORESBY</option>
+			<option value="ASN">PARAGUAY, ASUNCION</option>
+			<option value="LMA">PERU, LIMA</option>
+			<option value="MNL">PHILIPPINES, MANILA</option>
+			<option value="KRK">POLAND, KRAKOW</option>
+			<option value="WRW">POLAND, WARSAW</option>
+			<option value="LSB">PORTUGAL, LISBON</option>
+			<option value="PTD">PORTUGAL, PONTA DELGADA</option>
+			<option value="DOH">QATAR, DOHA</option>
+			<option value="CRY">REPUBLIC OF GUINEA, CONAKRY</option>
+			<option value="BCH">ROMANIA, BUCHAREST</option>
+			<option value="MOS">RUSSIA, MOSCOW</option>
+			<option value="SPT">RUSSIA, ST. PETERSBURG</option>
+			<option value="VLA">RUSSIA, VLADIVOSTOK</option>
+			<option value="YEK">RUSSIA, YEKATERINBURG</option>
+			<option value="KGL">RWANDA, KILGALI</option>
+			<option value="DHR">SAUDI ARABIA, DHAHRAN</option>
+			<option value="JDD">SAUDI ARABIA, JEDDAH</option>
+			<option value="RID">SAUDI ARABIA, RIYADH</option>
+			<option value="DKR">SENEGAL, DAKAR</option>
+			<option value="BLG">SERBIA, BELGRADE</option>
+			<option value="FTN">SIERRA LEONE, FREETOWN</option>
+			<option value="SGP">SINGAPORE, SINGAPORE</option>
+			<option value="BTS">SLOVAKIA, BRATISLAVA</option>
+			<option value="LJU">SLOVENIA, LJUBLJANA</option>
+			<option value="CPT">SOUTH AFRICA, CAPE TOWN</option>
+			<option value="DRB">SOUTH AFRICA, DURBAN</option>
+			<option value="JHN">SOUTH AFRICA, JOHANNESBURG</option>
+			<option value="SEO">SOUTH KOREA, SEOUL</option>
+			<option value="MDD">SPAIN, MADRID</option>
+			<option value="CLM">SRI LANKA, COLOMBO</option>
+			<option value="KHT">SUDAN, KHARTOUM</option>
+			<option value="PRM">SURINAME, PARAMARIBO</option>
+			<option value="MBA">SWAZILAND, MBABANE</option>
+			<option value="STK">SWEDEN, STOCKHOLM</option>
+			<option value="BEN">SWITZERLAND, BERN</option>
+			<option value="DMS">SYRIA, DAMASCUS</option>
+			<option value="TAI">TAIWAN, TAIPEI</option>
+			<option value="DHB">TAJIKISTAN, DUSHANBE</option>
+			<option value="DRS">TANZANIA, DAR ES SALAAM</option>
+			<option value="BNK">THAILAND, BANGKOK</option>
+			<option value="CHN">THAILAND, CHIANG MAI</option>
+			<option value="LOM">TOGO, LOME</option>
+			<option value="PTS">TRINIDAD, PORT OF SPAIN</option>
+			<option value="TNS">TUNISIA, TUNIS</option>
+			<option value="ANK">TURKEY, ANKARA</option>
+			<option value="IST">TURKEY, ISTANBUL</option>
+			<option value="AKD">TURKMENISTAN, ASHGABAT</option>
+			<option value="KMP">UGANDA, KAMPALA</option>
+			<option value="KEV">UKRAINE, KYIV</option>
+			<option value="ABD">UNITED ARAB EMIRATES, ABU DHABI</option>
+			<option value="DUB">UNITED ARAB EMIRATES, DUBAI</option>
+			<option value="MTV">URUGUAY, MONTEVIDEO</option>
+			<option value="THT">UZBEKISTAN, TASHKENT</option>
+			<option value="CRS">VENEZUELA, CARACAS</option>
+			<option value="HAN">VIETNAM, HANOI</option>
+			<option value="HCM">VIETNAM, HO CHI MINH CITY</option>
+			<option value="DPT">WASHINGTON, DC - USA</option>
+			<option value="SAA">YEMEN, SANAA</option>
+			<option value="LUS">ZAMBIA, LUSAKA</option>
+			<option value="HRE">ZIMBABWE, HARARE</option>
+
+		</select>
+                            
+	</div>
+                            <br />
+
+                            <span id="ctl00_ContentPlaceHolder1_lblCase">Application ID or Case Number</span>
+                            
+<img src="_res/img/icon_help.png" height="16" width="16" onclick="$find('modalBarcode').show(); return false;" title="click to view sample confirmation number" alt="help icon"/>
+<div id="ctl00_ContentPlaceHolder1_ucBarcodeSample_pnlPreview" class="barcode-preview" style="display:none;">
+		
+    <h3>Case Number</h3>
+    <div>
+        Embassy or Consulate may have given you a case number. It looks similar to: <span class="case-number">2012118 345 0001</span>
+    </div><br /><br />
+
+    <h3>Application ID</h3>
+    <img src="_res/img/barcode_sample.png" width="600" height="407" alt="sample comfirmation number" />
+    <div style="width:600px !important; margin-top:30px; text-align:center;">
+        <a onclick="$find('modalBarcode').hide(); return false;" id="ctl00_ContentPlaceHolder1_ucBarcodeSample_lnkCloseInbox" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$ucBarcodeSample$lnkCloseInbox&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Close</a>
+    </div>
+
+	</div>
+
+<a href="Views/#" id="ctl00_ContentPlaceHolder1_ucBarcodeSample_anchorModalActivate"></a>
+ 
+                            <span id="ctl00_ContentPlaceHolder1_vldCaseNo" style="color:Red;visibility:hidden;"><img alt="Error" src="_res/img/trg_bk.gif" /></span><br />
+                                
+                            <input name="ctl00$ContentPlaceHolder1$txbCase" type="text" value="AA003M1UDI" maxlength="50" id="ctl00_ContentPlaceHolder1_txbCase" class="search-term" /> 
+                            
+                            <div class="hint" style="margin-top:5px;">
+                                <span id="ctl00_ContentPlaceHolder1_lblSearchHint" class="hint">(e.g., AA0020AKAX or 2012118 345 0001)</span>
+                            </div>                           
+                        </div><br />
+                        
+                        
+                        <div style="width:400px;text-align:right;">
+                            <input type="image" name="ctl00$ContentPlaceHolder1$btnSubmit" id="ctl00_ContentPlaceHolder1_btnSubmit" src="_res/img/btn_submit.png" alt="submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="height:32px;width:141px;border-width:0px;" />
+                            <br /><br />
+                        </div>                        
+                    </div><br />           
+                </fieldset>
+            </div>
+            
+</div>
+        
+        
+        |0|hiddenField|__EVENTTARGET||0|hiddenField|__EVENTARGUMENT||0|hiddenField|__LASTFOCUS||156|hiddenField|__VIEWSTATE|/wEPaA8FDzhkMGVkMzgwNGEzMzlmYxgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRidG5TdWJtaXSpb0OVZ86hi0bsVal79Bh8TvJ85w==|1880|hiddenField|__EVENTVALIDATION|/wEW6gECifuorAUCuueB3QMCu8WcswoC3KrOwwYCxfTx9gIC1+6r8AoC9MfXtA8C5tme3wICkcD33g8C/tnu3wIC/pjUdQLE3KK2AgKUzuy0CAKBsebrDgLUneWfDAKJleyfAwKIpuzABAL6mIB2Av/Zit8CAqjRrcABAoWViJ8DAtGuscABAv6YhHYC4a3QtgQClLGy6w4C8ce7tQ8C662AtwQCyuP9gAUC7s6YtAgC9Nn63wIC7auJ6QECobiT6gsC/MfvtQ8C6c7AtAgC7quZ6QECn8DT3g8CgsD/3g8Csbjf6gsC4tme3wICvdSVtgEC/7Kr9AsCk8D33g8C46uV6QEC9seftQ8CkLHu6w4CvefmqQYChbHm6w4Csuf6qQYCvbiT6gsChLG26w4Csbif6gsC2bKb9AsC5q28twQCg8DH3g8C/bT+wQ4Ck7HS6g4C4a2ItwQCjpXwnwMCorj76gsCsLjr6gsCgc6wtAgC09zmtQIC+pjAdQKAwK/fDwKGldSfAwKeg+n1DQKriub0DgK5zbOsDwKpiqb1DgK7ir71DgLvmNR1Aq2c0Z4MAqWK/vQOAu/8/aoFAv3Hq7UPAqKcyZ4MAt7c1rUCAuSYrHYC7JiEdgKTzvi0CAKFlZCfAwL9x9e0DwLLx5e1DwKZldyfAwKAlcCfAwKN5+KpBgLm6paABgLl/PmqBQK/iuL0DgK91OW2AQKEwJveDwLcrsXfAQKP1KW2AQKhuPfqCwLE4+GABQKpnOWfDAKP586pBgLpzui0CAKvnL2fDALersnfAQKazsS0CALn6tqfBgLszsS0CALNx9e0DwLf3Mq1AgLd48GABQKAleSfAwL3x++1DwLIsrf0CwKbwP/eDwKq0dHfAQLw2ZLfAgKjiv70DgKw1PW2AQL+tMrBDgLmmIR2Au/8haoFAvPZ4t8CApKx4usOApXOxLQIApyxkusOAtau0d8BAoextusOAuTZ1t4CApOx5usOAvmY2HUCqN+itgIC/8eLtQ8C6vypqwUCq4ra9A4CkrG26w4C9ceLtQ8C9Me/tQ8C4Py1qgUC/8e/tQ8CvLjv6gsC0q65wAEC+ceftQ8CsriT6gsCwMfftA8Cz+PtgAUC6/z5qgUCxOPtgAUC0p+wbALE46GBBQL3x8O0DwL3x4e1DwK3lfyfAwL0x6O1DwL/mLx2AoiV5J8DAtGd3Z4MAurOwLQIAorUsbYBAtuurcABArGmiMAEAv2YqHYCiJXYnwMC1a7x3wECncD/3g8CyLTywQ4Ct6aAwAQC+JjwdQL9q5XpAQLIx5O1DwKeseLrDgLyx5O1DwK356aqBgLC4/WABQKe/IGqBQKe/PmqBQKEldifAwL+2Y7fAgL2x6e1DwLfrrXAAQL39YyrCAKTzsC0CALRnYmfDAL56rqABgLNtK7CDgLn6qqABgL5mNB1AoSx/usOAvjZgt8CAs2u+d8BAvTHw7QPAtvj0YAFAqucyZ4MAtOdpZ8MAtvjxYAFApLA994PApmVxJ8DArDUqbYBAv6YjHYCsqbgwAQClLH+6w4C687EtAgCjZX0nwMCq4ri9A4CrpzJngwC4fyZqgUCnLGe6w4CnvzxqgUC/9m63wICx669wAEChZWAnwMC8JiodgKOg431DQLrzvy0CALwmIR2Atauxd8BAoaV9J8DAur8jaoFAuyYjHYC4JjUdQLVrsXfAQKaseLrDgKinK2fDAKI1IG2AQLW3Ja1AgKinMGeDALrzsi0CAKo36q2AgKFsZ7rDgL/mIR2AouVkJ8DApb8vaoFApWx/usOAuXZvt8CAviYiHYCzrLj9AsC9LKa5g4C5sD0xwQC+NCVogqBw4yPibd7odKxrIy76rK7VUHcZA==|0|asyncPostBackControlIDs|||0|postBackControlIDs|||103|updatePanelIDs||tctl00$ContentPlaceHolder1$UpdatePanel1,tctl00$ContentPlaceHolder1$ucApplicationStatusView$UpdatePanel1|62|childUpdatePanelIDs||ctl00$ContentPlaceHolder1$ucApplicationStatusView$UpdatePanel1|38|panelsToRefreshIDs||ctl00$ContentPlaceHolder1$UpdatePanel1|2|asyncPostBackTimeout||90|19|formAction||Status.aspx?App=NIV|4|dataItem|ctl00_ContentPlaceHolder1_ucApplicationStatusView_anchorModalActivate|show|71|arrayDeclaration|Page_ValidationSummaries|document.getElementById("ctl00_ContentPlaceHolder1_ValidationSummary1")|69|arrayDeclaration|Page_Validators|document.getElementById("ctl00_ContentPlaceHolder1_CustomValidator1")|62|arrayDeclaration|Page_Validators|document.getElementById("ctl00_ContentPlaceHolder1_vldCaseNo")|213|scriptBlock|ScriptPath|/CEACStatTracker/ScriptResource.axd?d=v8nfTrcxwrzat704sUHdxPP0BolTQ8uAFEN_ITiSaMTHPgTZpT0AfBfSf6f4Y20T2h_11Hk2sl9Moiotnk9Oe6v6fOYGZAOfLWZruazVOaZC5RhPWlcwiDaQRixYAWl0pRcTbboNp8mV7oDWIyIRh-Lnv741&t=ffffffffac373f69|112|scriptBlock|ScriptPath|/CEACStatTracker/Status.aspx?_TSM_HiddenField_=ctl00_ToolkitScriptManager1_HiddenField&_TSM_CombinedScripts_=%3b|219|scriptStartupBlock|ScriptContentNoTags|
+document.getElementById('ctl00_ContentPlaceHolder1_ValidationSummary1').dispose = function() {
+    Array.remove(Page_ValidationSummaries, document.getElementById('ctl00_ContentPlaceHolder1_ValidationSummary1'));
+}
+|281|scriptStartupBlock|ScriptContentNoTags|
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        |628|scriptStartupBlock|ScriptContentNoTags|Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_ContentPlaceHolder1_ucApplicationStatusView_anchorModalActivate","DropShadow":true,"OkControlID":"ctl00_ContentPlaceHolder1_ucApplicationStatusView_anchorModalActivate","PopupControlID":"ctl00_ContentPlaceHolder1_ucApplicationStatusView_pnlStatus","Y":10,"dynamicServicePath":"/CEACStatTracker/Status.aspx","id":"ctl00_ContentPlaceHolder1_ucApplicationStatusView_modalStatus"}, null, null, $get("ctl00_ContentPlaceHolder1_ucApplicationStatusView_anchorModalActivate"));
+});
+|250|scriptStartupBlock|ScriptContentNoTags|Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"ctl00_ContentPlaceHolder1_UpdatePanel1","displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ContentPlaceHolder1_upProgress"));
+});
+|206|scriptStartupBlock|ScriptContentNoTags|
+document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator1'));
+}
+|548|scriptStartupBlock|ScriptContentNoTags|Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_ContentPlaceHolder1_ucBarcodeSample_anchorModalActivate","DropShadow":true,"OkControlID":"ctl00_ContentPlaceHolder1_ucBarcodeSample_anchorModalActivate","PopupControlID":"ctl00_ContentPlaceHolder1_ucBarcodeSample_pnlPreview","Y":50,"dynamicServicePath":"/CEACStatTracker/Status.aspx","id":"modalBarcode"}, null, null, $get("ctl00_ContentPlaceHolder1_ucBarcodeSample_anchorModalActivate"));
+});
+|192|scriptStartupBlock|ScriptContentNoTags|
+document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo'));
+}
+|90|onSubmit||if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;|39|expando|document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator1')['controltovalidate']|"ctl00_ContentPlaceHolder1_ddlLocation"|32|expando|document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator1')['evaluationfunction']|"CustomValidatorEvaluateIsValid"|35|expando|document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo')['controltovalidate']|"ctl00_ContentPlaceHolder1_txbCase"|32|expando|document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo')['evaluationfunction']|"CustomValidatorEvaluateIsValid"|
