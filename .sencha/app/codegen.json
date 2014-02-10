@@ -291,6 +291,17 @@
         "name": "Main",
         "controllerNamespace": "Two21G.controller"
       }
+    },
+    "app/controller/Central.js": {
+      "source": "{controllerFileName}.js.tpl.merge",
+      "version": "7cd8d1cf12515ca525732931d6b775e3f7924ad9",
+      "parameters": {
+        "appName": "Two21G",
+        "controllerName": "Central",
+        "controllerFileName": "Central",
+        "name": "Central",
+        "controllerNamespace": "Two21G.controller"
+      }
     }
   }
 }

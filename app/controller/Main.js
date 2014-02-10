@@ -3,11 +3,15 @@ Ext.define('Two21G.controller.Main', {
     
     config: {
         refs: {
-			searchAction:'button[action=getStatus]'
+			searchAction:'button[action=getStatus]',
+			mainPanel:'mainpanel'
         },
         control: {
         	searchAction:{
         		tap:'getStatus'
+        	},
+        	'blogs':{
+        		disclose:'showBlogs'
         	}
         }
     },
@@ -52,6 +56,19 @@ Ext.define('Two21G.controller.Main', {
     },
     processResponse:function(responseString){
     	
+    },
+    showBlogs:function(list,record){
+    	this.getMainPanel().push({
+            xtype:'panel',
+            scrollable: {
+                direction: 'both',
+                directionLock: true
+            },
+            styleHtmlContent:true,
+            title: record.get('id'),
+            html:record.get('blog')
+            });
+			//this.getBlogDetails().setData(record.getData())
     },
     
     //called when the Application is launched, remove if not needed

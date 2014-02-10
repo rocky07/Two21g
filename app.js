@@ -18,8 +18,10 @@ Ext.application({
     ],
 
     views: [
-        'Main','StatusForm'
+        'Main','StatusForm','Blogs','MainPanel','Qas'
     ],    
+    stores:['Blogs','Qas'],
+    models:['Blogs','Qas'],
     controllers:['Main'],
 
     icon: {
@@ -45,7 +47,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('Two21G.view.Main'));
+        Ext.Viewport.add(Ext.create('Two21G.view.MainPanel'));
     },
 
     onUpdated: function() {
