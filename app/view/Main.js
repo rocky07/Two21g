@@ -23,6 +23,11 @@ Ext.define('Two21G.view.Main', {
             	title: 'Q&As',
                 iconCls: 'star',
             	xtype:'qas'
+            },
+            {
+            	title: 'Settings',
+                iconCls: 'star',
+            	xtype:'settings'
             }
             
         ]

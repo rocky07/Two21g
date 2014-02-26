@@ -18,10 +18,10 @@ Ext.application({
     ],
 
     views: [
-        'Main','StatusForm','Blogs','MainPanel','Qas'
+        'Main','StatusForm','Blogs','MainPanel','Qas','NewBlog','Settings'
     ],    
-    stores:['Blogs','Qas'],
-    models:['Blogs','Qas'],
+    stores:['Blogs','Qas','Settings'],
+    models:['Blogs','Qas','Settings'],
     controllers:['Main'],
 
     icon: {

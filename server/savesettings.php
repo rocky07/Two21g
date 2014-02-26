@@ -5,22 +5,25 @@ include("autoload.php");
 $mainDAO =new MainDAO();
 $name=$_REQUEST['name'];
 $email=$_REQUEST['email'];
-$guid=$_REQUEST['guid'];
-if($guid==null && $guid==""){	
-	$guid=uniqid();
-	if($mainDAO->saveSettings($name,$email,$guid)){
-		$result="{success:true,guid:'$guid',name:'$name',email:'$email'}";
+$token=$_REQUEST['token'];
+$userId=$_REQUEST['userId'];
+
+if($token==null || $token==""){
+	$token=uniqid();		
+	if($userId=$mainDAO->saveSettings($name,$email,$token)){
+		$result="{'success':true,userId:'$userId',token:'$token',name:'$name',email:'$email'}";
 	}else{
-		$result="{success:false}";
+		$result="{'success':false}";
 	}
 }else{	
-	$updateFlag=$mainDAO->saveSettings($_REQUEST,$guid);
+	$updateFlag=$mainDAO->updateSettings($_REQUEST,$token);
 	if($updateFlag>0){
 		//$result="{success:true,guid:'$guid',name:'$name',email:'$email'}";
-		$result="{success:true,id:'$guid',name:'$name',email:'$email'}";
+		$result="{'success':true,token:'$token',name:'$name',email:'$email'}";
 	}else{
-		$result="{success:false}";	
+		$result="{'success':false}";	
 	}	
 }
+//$result+="]";
 echo $result;
 ?>

@@ -605,6 +605,29 @@ function fetchAllQuestions($start,$limit)
 		$records	=	$this->fetchAll($qry,$param);
 		return $records;
 	}
+function fetchAllAnswers($questionId)
+{
+		$qry	=	"select *,users.avatar from answers inner join users where answers.avatar=users.userid and answers.question_id=?";
+		$param	=	array("i",$questionId);
+		$records	=	$this->fetchAll($qry,$param);
+		return $records;
+	}	
+function saveBlogs($avatar,$title,$blog)
+	{
+			$array=array(
+					"avatar"=>$avatar,
+					"title"=>$title,
+					"blog"=>$blog					
+			);
+			$type	=	"iss";
+			if($this->insert($array,"blogs",$type)){
+				$result	=	true;
+				}else{
+				$result	=	false;
+				}
+	
+		return $result;
+	}	
 function modifyRecipes(crea$title,$ingredients,$prep,$notes,$avatar_id,$evolved_from)
 	{
 		
@@ -626,12 +649,12 @@ function modifyRecipes(crea$title,$ingredients,$prep,$notes,$avatar_id,$evolved_
 	
 		return $result;
 	}
-function saveSettings($avatar,$email,$guid)
+function saveSettings($avatar,$email,$token)
 	{
 			$array=array(
 					"avatar"=>$avatar,
 					"email"=>$email,
-					"guid"=>$guid					
+					"token"=>$token					
 			);
 			$type	=	"sss";
 			if($this->insert($array,"users",$type)){
@@ -640,16 +663,16 @@ function saveSettings($avatar,$email,$guid)
 				$result	=	false;
 				}
 	
-		return $result;
+		return $this->lastInsertId();
 	}
-	function updateSettings($values,$guid){
+	function updateSettings($values,$userId){
 			$array=array(
 										"avatar"=>$values["avatar"],
 										"email"=>$values["email"]
 							);		
 				$tname	=	"users";
-				$cond	 =	"guid=?";
-				$param	=	array($guid);
+				$cond	 =	"userid=?";
+				$param	=	array($userId);
 				$ty		=	"ssi";		
 				return $this->update($array,$tname,$cond,$param,$ty);
 	}

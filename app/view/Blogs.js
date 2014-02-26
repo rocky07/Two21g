@@ -5,6 +5,18 @@ Ext.define("Two21G.view.Blogs", {
     config:{
             store:'Blogs',
             title:'Blogs',
+            items:[
+                   {
+                   xtype:'toolbar',
+                   docked:'top',
+                   items:[
+                          {
+                          text:'New Blog',
+                          action:'newBlog'
+                          }
+                          ]
+                   }
+                   ],            
             plugins:[
                      {
                     	 xclass:'Ext.plugin.ListPaging'                    	 
