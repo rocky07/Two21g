@@ -600,7 +600,7 @@ function fetchAllBlogs($start,$limit)
 	}
 function fetchAllQuestions($start,$limit)
 {
-		$qry	=	"select *,users.avatar from questions inner join users where questions.avatar=users.userid LIMIT ?,?";
+		$qry	=	"select *,users.avatar from questions inner join users where questions.userid=users.userid LIMIT ?,?";
 		$param	=	array("ii",$start,$limit);
 		$records	=	$this->fetchAll($qry,$param);
 		return $records;
@@ -627,7 +627,23 @@ function saveBlogs($avatar,$title,$blog)
 				}
 	
 		return $result;
-	}	
+	}
+function saveQ($userId,$question)
+	{
+			$array=array(
+					"userId"=>$userId,
+					"question"=>$question					
+			);
+			$type	=	"iss";
+			if($this->insert($array,"questions",$type)){
+				$result	=	true;
+				}else{
+				$result	=	false;
+				}
+	
+		return $result;
+	}		
+	
 function modifyRecipes(crea$title,$ingredients,$prep,$notes,$avatar_id,$evolved_from)
 	{
 		

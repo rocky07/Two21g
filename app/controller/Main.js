@@ -9,6 +9,9 @@ Ext.define('Two21G.controller.Main', {
 			dosaveblog:'button[action=savenewblog]',
 			settingsButton:'button[action=settings]',
 			saveSettingsButton:'button[action=savesettings]',
+			editBlogButton:'button[action=editBlog]',
+			askQButton:'button[action=askQ]',
+			saveQButton:'button[action=savenewQ]',
 			settingsPanel:'settings'
 				
         },
@@ -33,6 +36,15 @@ Ext.define('Two21G.controller.Main', {
         	},
         	saveSettingsButton:{
         		tap:'doSaveSettings'
+        	},
+        	editBlogButton:{
+        		tap:'doLoadEditBlog'
+        	},
+        	askQButton:{
+        		tap:'doLoadAskQ'
+        	},
+        	saveQButton:{
+        		tap:'saveNewQ'
         	}
         }
     },
@@ -81,18 +93,26 @@ Ext.define('Two21G.controller.Main', {
     showBlogs:function(list,record){
     	this.getMainPanel().push({
             xtype:'panel',
+            items:[
+				{
+				    xtype:'toolbar',
+				    docked:'top',
+				    items:[
+				           {
+				           text:'Edit',
+				           action:'editBlog'
+				           }
+				           ]
+				    }
+                   ],
             scrollable: {
                 direction: 'both',
                 directionLock: true
             },
+            
             styleHtmlContent:true,
             title: record.get('title'),
-            html:record.get('blog'),
-            button:[{
-		            	text:'Edit',
-		            	action:'editBlog'
-		            }
-                    ]
+            html:record.get('blog')
             });
 			//this.getBlogDetails().setData(record.getData())
     },
@@ -176,6 +196,30 @@ Ext.define('Two21G.controller.Main', {
 		        }
 		    }
 		});		
+	},
+	doLoadEditBlog:function(btn){
+		this.getMainPanel().push({xtype:'newblog',
+			title:'Edit Blog'
+			});
+	},
+	doLoadAskQ:function(){
+		
+	},
+	saveNewQ:function(btn){
+		var formPanel=btn.up('panel');    	
+    	var userId=Ext.getStore('Settings').getAt(0).get('userId')
+    	formPanel.submit({
+    		url:'server/savenewq.php',
+    		params:{
+    			userId:userId
+    		},
+    		success:function(response){
+    			console.log(response.responseText);
+    		},
+    		failure:function(){
+    			console.log('server error');
+    		}
+    	})		
 	},
     //called when the Application is launched, remove if not needed
     launch: function(app) {

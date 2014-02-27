@@ -10,6 +10,16 @@ Ext.define("Two21G.view.Qas", {
                     	 xclass:'Ext.plugin.ListPaging'                    	 
                     	 }
                      ],
+             items:[{
+				    xtype:'toolbar',
+				    docked:'top',
+				    items:[
+				           {
+				           text:'Ask',
+				           action:'askQ'
+				           }
+				           ]
+				    }],        
 	        iconCls:'home',
 	        onItemDisclosure:true,
 	        itemTpl:'{question}<br>by {avatar}'
