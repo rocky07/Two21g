@@ -26,7 +26,7 @@ Ext.define('Two21G.view.Main', {
             },
             {
             	title: 'Settings',
-                iconCls: 'star',
+                iconCls: 'settings',
             	xtype:'settings'
             }
             

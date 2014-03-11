@@ -14,15 +14,17 @@ Ext.define('Two21G.view.Settings',{
 					{
 					    xtype: 'textfield',
 					    name: 'name',
-					    placeHolder:'name'
+					    //placeHolder:'name'
+					    label:'Name'
 					},
 			        {
 			            xtype: 'textfield',
 			            name: 'email',
-			            placeHolder:'Email'
+			            label:'Email'
+			            //placeHolder:'Email'
 			        },
 			        {
-			            xtype: 'textfield',
+			            xtype: 'hiddenfield',
 			            name: 'token',
 			            placeHolder:'Token'
 			        }

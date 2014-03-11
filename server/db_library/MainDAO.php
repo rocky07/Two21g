@@ -593,21 +593,21 @@ function fetchBlogById($id)
 		}
 function fetchAllBlogs($start,$limit)
 	{
-		$qry	=	"select *,users.avatar from blogs inner join users where blogs.avatar=users.userid LIMIT ?,?";
+		$qry	=	"select *,users.avatar from blogs inner join users where blogs.avatar=users.userid  order by date_created desc LIMIT ?,?";
 		$param	=	array("ii",$start,$limit);
 		$records	=	$this->fetchAll($qry,$param);
 		return $records;
 	}
 function fetchAllQuestions($start,$limit)
 {
-		$qry	=	"select *,users.avatar from questions inner join users where questions.userid=users.userid LIMIT ?,?";
+		$qry	=	"select *,users.avatar from questions inner join users where questions.userid=users.userid order by created_date desc LIMIT ?,?";
 		$param	=	array("ii",$start,$limit);
 		$records	=	$this->fetchAll($qry,$param);
 		return $records;
 	}
 function fetchAllAnswers($questionId)
 {
-		$qry	=	"select *,users.avatar from answers inner join users where answers.avatar=users.userid and answers.question_id=?";
+		$qry	=	"select *,users.avatar from answers inner join users where answers.user_id=users.userid and answers.question_id=?";
 		$param	=	array("i",$questionId);
 		$records	=	$this->fetchAll($qry,$param);
 		return $records;
@@ -634,7 +634,7 @@ function saveQ($userId,$question)
 					"userId"=>$userId,
 					"question"=>$question					
 			);
-			$type	=	"iss";
+			$type	=	"is";
 			if($this->insert($array,"questions",$type)){
 				$result	=	true;
 				}else{
@@ -642,7 +642,24 @@ function saveQ($userId,$question)
 				}
 	
 		return $result;
-	}		
+	}
+
+function saveAnswers($userId,$questionId,$answer)
+	{
+			$array=array(
+					"user_id"=>$userId,
+					"question_id"=>$questionId,
+					"answer"=>$answer					
+			);
+			$type	=	"iis";
+			if($this->insert($array,"answers",$type)){
+				$result	=	true;
+				}else{
+				$result	=	false;
+				}
+	
+		return $result;
+	}
 	
 function modifyRecipes(crea$title,$ingredients,$prep,$notes,$avatar_id,$evolved_from)
 	{
@@ -683,7 +700,7 @@ function saveSettings($avatar,$email,$token)
 	}
 	function updateSettings($values,$userId){
 			$array=array(
-										"avatar"=>$values["avatar"],
+										"avatar"=>$values["name"],										
 										"email"=>$values["email"]
 							);		
 				$tname	=	"users";
@@ -692,6 +709,16 @@ function saveSettings($avatar,$email,$token)
 				$ty		=	"ssi";		
 				return $this->update($array,$tname,$cond,$param,$ty);
 	}
-	
+	function updateBlog($values){
+			$array=array(
+										"title"=>$values["title"],										
+										"blog"=>$values["blog"]
+							);		
+				$tname	=	"blogs";
+				$cond	 =	"id=?";
+				$param	=	array($values["id"]);
+				$ty		=	"ssi";		
+				return $this->update($array,$tname,$cond,$param,$ty);
+	}
 	
 }?>

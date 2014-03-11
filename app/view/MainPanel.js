@@ -3,8 +3,7 @@ Ext.define('Two21G.view.MainPanel', {
     requires:['Two21G.view.Main'],
     xtype:'mainpanel',
     
-    config: {
-	
+    config: {				
             items:[
 				/*{
 				    xtype:'toolbar',

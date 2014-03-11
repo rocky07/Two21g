@@ -12,13 +12,13 @@
 
 Ext.application({
     name: 'Two21G',
-
+    userId:'',
     requires: [
         'Ext.MessageBox'
     ],
 
     views: [
-        'Main','StatusForm','Blogs','MainPanel','Qas','NewBlog','Settings'
+        'Main','StatusForm','Blogs','MainPanel','Qas','NewBlog','Settings','NewQ','NewAnswers'
     ],    
     stores:['Blogs','Qas','Settings'],
     models:['Blogs','Qas','Settings'],

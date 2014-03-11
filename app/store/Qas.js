@@ -6,7 +6,7 @@ Ext.define('Two21G.store.Qas', {
          autoLoad: true,
          proxy: {
          type: 'ajax',
-         url : 'server/qas.php',
+         url : 'http://localhost/Two21G/server/qas.php',
          reader: {
 	         type: 'json'
 	         }

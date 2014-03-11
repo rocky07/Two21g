@@ -755,7 +755,20 @@ Ext.ClassManager.addNameAlternateMappings({
     "Ext.viewport.WP"
   ],
   "Two21G.controller.Main": [],
+  "Two21G.model.Blogs": [],
+  "Two21G.model.Qas": [],
+  "Two21G.model.Settings": [],
+  "Two21G.store.Blogs": [],
+  "Two21G.store.Qas": [],
+  "Two21G.store.Settings": [],
+  "Two21G.view.Blogs": [],
   "Two21G.view.Main": [],
+  "Two21G.view.MainPanel": [],
+  "Two21G.view.NewAnswers": [],
+  "Two21G.view.NewBlog": [],
+  "Two21G.view.NewQ": [],
+  "Two21G.view.Qas": [],
+  "Two21G.view.Settings": [],
   "Two21G.view.StatusForm": []
 });
 Ext.ClassManager.addNameAliasMappings({
@@ -1712,8 +1725,35 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
   "Two21G.controller.Main": [],
+  "Two21G.model.Blogs": [],
+  "Two21G.model.Qas": [],
+  "Two21G.model.Settings": [],
+  "Two21G.store.Blogs": [],
+  "Two21G.store.Qas": [],
+  "Two21G.store.Settings": [],
+  "Two21G.view.Blogs": [
+    "widget.blogs"
+  ],
   "Two21G.view.Main": [
     "widget.main"
+  ],
+  "Two21G.view.MainPanel": [
+    "widget.mainpanel"
+  ],
+  "Two21G.view.NewAnswers": [
+    "widget.newanswers"
+  ],
+  "Two21G.view.NewBlog": [
+    "widget.newblog"
+  ],
+  "Two21G.view.NewQ": [
+    "widget.newq"
+  ],
+  "Two21G.view.Qas": [
+    "widget.qas"
+  ],
+  "Two21G.view.Settings": [
+    "widget.settings"
   ],
   "Two21G.view.StatusForm": [
     "widget.statusform"

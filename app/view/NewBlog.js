@@ -8,6 +8,10 @@ Ext.define('Two21G.view.NewBlog',{
 	        	{xtype:'fieldset',
 	        		items:[
 					{
+					    xtype: 'hiddenfield',
+					    name: 'id'
+					},
+					{
 					    xtype: 'textfield',
 					    name: 'title',
 					    placeHolder:'title'

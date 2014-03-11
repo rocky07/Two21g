@@ -1,4 +1,4 @@
-21351|updatePanel|ctl00_ContentPlaceHolder1_UpdatePanel1|
+21743|updatePanel|ctl00_ContentPlaceHolder1_UpdatePanel1|
             <div id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_UpdatePanel1">
 	
         <div id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_pnlStatus" class="application-status" style="display:none;">
@@ -6,53 +6,68 @@
             <div class="status-content">
                 <div class="title">
                     <span class="dos">U.S. Department of State</span><br />
-                    <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblAppName" class="app-name">NONIMMIGRANT VISA APPLICATION</span>
+                    <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblAppName" class="app-name"></span>
                 </div>
                 <div class="status">
-                    <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblStatus">Administrative Processing</span>
+                    <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblStatus"></span>
                 </div>
 
                 <table>
                     <tr>
-                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblCaseTitle">Application ID or Case Number</span>:</td>
-                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblCaseNo" class="case-number">AA003M1UDI</span></td>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblCaseTitle"></span>:</td>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblCaseNo" class="case-number"></span></td>
                     </tr>                    
                     <tr>
                         <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblSubmitDateTitle">Case Creation Date:</span></td>
-                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblSubmitDate">29-Oct-2013</span></td>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblSubmitDate"></span></td>
                     </tr>
                     <tr>
                         <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblStatusDateTitle">Status Updated Date:</span></td>
-                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblStatusDate">31-Oct-2013</span></td>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblStatusDate"></span></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblResponseDateTitle">Response Date:</span></td>
+                        <td><span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblResponseDate"></span></td>
                     </tr>
                 </table>
                 <br />
 
                 <div style="clear:both; max-height:150px; overflow:auto;">
-                    <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblMessage">Your visa case is currently undergoing necessary administrative processing.  This processing can take several weeks.  Please follow any instructions provided by the Consular Officer at the time of your interview. If further information is needed, you will be contacted.  If your visa application is approved, it will be processed and mailed/available within two business days.</span>
+                    <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblMessage"></span>
                     <div class="translation">
                         <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblTranslation"></span>
                     </div>                    
                 
 
                     <div style="display:none;border:dotted 1px #c2c2c2; padding:10px 10px; margin-bottom:10px;">
-                         
+                         <div id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_pnlMessage">
+			
+                            <div style="margin-bottom:5px;">
+                                <a href="#" class="view-message">Click here</a> to view your messages.
+                            </div>
+                        
+		</div>
                 
                         
                     </div><br />
 
                     <div>
                         <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblInfo">For more information, please visit </span>
-                        <a id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lnkContactUrl" href="http://chennai.usconsulate.gov" target="_blank">U.S. Consulate General Chennai.</a>
+                        <a id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lnkContactUrl" target="_blank"></a>
                     </div>      
                 </div><br />  
             </div>    
 
-                      
+            <div id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_ucApplicationList_UpdatePanel1">
+			
+        <div>
+            <span id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_ucApplicationList_lblAppList">Your search has returned multiple results. Please select the Case Number to display the status.</span>
+        </div><br />
+        <div class="application-list">
+            
+        </div>
+    
+		</div>          
 
             <div style="width:600px !important; text-align:center;">
                 <a id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lnkCloseInbox" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$ucApplicationStatusView$lnkCloseInbox&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Close</a>
@@ -70,8 +85,8 @@
                 <h2>Visa Status Check</h2>
  
 
-                <div id="ctl00_ContentPlaceHolder1_ValidationSummary1" class="error-message" style="color:Red;background-color:White;display:none;">
-
+                <div id="ctl00_ContentPlaceHolder1_ValidationSummary1" class="error-message" style="color:Red;background-color:White;">
+		<ul><li>Invalid Application ID or Case Number.</li></ul>
 	</div>
 
                 <div>
@@ -363,9 +378,9 @@
 
 <a href="Views/#" id="ctl00_ContentPlaceHolder1_ucBarcodeSample_anchorModalActivate"></a>
  
-                            <span id="ctl00_ContentPlaceHolder1_vldCaseNo" style="color:Red;visibility:hidden;"><img alt="Error" src="_res/img/trg_bk.gif" /></span><br />
+                            <span id="ctl00_ContentPlaceHolder1_vldCaseNo" style="color:Red;"><img alt="Error" src="_res/img/trg_bk.gif" /></span><br />
                                 
-                            <input name="ctl00$ContentPlaceHolder1$txbCase" type="text" value="AA003M1UDI" maxlength="50" id="ctl00_ContentPlaceHolder1_txbCase" class="search-term" /> 
+                            <input name="ctl00$ContentPlaceHolder1$txbCase" type="text" value="AA0031UDI" maxlength="50" id="ctl00_ContentPlaceHolder1_txbCase" class="search-term" /> 
                             
                             <div class="hint" style="margin-top:5px;">
                                 <span id="ctl00_ContentPlaceHolder1_lblSearchHint" class="hint">(e.g., AA0020AKAX or 2012118 345 0001)</span>
@@ -384,7 +399,7 @@
 </div>
         
         
-        |0|hiddenField|__EVENTTARGET||0|hiddenField|__EVENTARGUMENT||0|hiddenField|__LASTFOCUS||156|hiddenField|__VIEWSTATE|/wEPaA8FDzhkMGVkMzgwNGEzMzlmYxgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRidG5TdWJtaXSpb0OVZ86hi0bsVal79Bh8TvJ85w==|1880|hiddenField|__EVENTVALIDATION|/wEW6gECifuorAUCuueB3QMCu8WcswoC3KrOwwYCxfTx9gIC1+6r8AoC9MfXtA8C5tme3wICkcD33g8C/tnu3wIC/pjUdQLE3KK2AgKUzuy0CAKBsebrDgLUneWfDAKJleyfAwKIpuzABAL6mIB2Av/Zit8CAqjRrcABAoWViJ8DAtGuscABAv6YhHYC4a3QtgQClLGy6w4C8ce7tQ8C662AtwQCyuP9gAUC7s6YtAgC9Nn63wIC7auJ6QECobiT6gsC/MfvtQ8C6c7AtAgC7quZ6QECn8DT3g8CgsD/3g8Csbjf6gsC4tme3wICvdSVtgEC/7Kr9AsCk8D33g8C46uV6QEC9seftQ8CkLHu6w4CvefmqQYChbHm6w4Csuf6qQYCvbiT6gsChLG26w4Csbif6gsC2bKb9AsC5q28twQCg8DH3g8C/bT+wQ4Ck7HS6g4C4a2ItwQCjpXwnwMCorj76gsCsLjr6gsCgc6wtAgC09zmtQIC+pjAdQKAwK/fDwKGldSfAwKeg+n1DQKriub0DgK5zbOsDwKpiqb1DgK7ir71DgLvmNR1Aq2c0Z4MAqWK/vQOAu/8/aoFAv3Hq7UPAqKcyZ4MAt7c1rUCAuSYrHYC7JiEdgKTzvi0CAKFlZCfAwL9x9e0DwLLx5e1DwKZldyfAwKAlcCfAwKN5+KpBgLm6paABgLl/PmqBQK/iuL0DgK91OW2AQKEwJveDwLcrsXfAQKP1KW2AQKhuPfqCwLE4+GABQKpnOWfDAKP586pBgLpzui0CAKvnL2fDALersnfAQKazsS0CALn6tqfBgLszsS0CALNx9e0DwLf3Mq1AgLd48GABQKAleSfAwL3x++1DwLIsrf0CwKbwP/eDwKq0dHfAQLw2ZLfAgKjiv70DgKw1PW2AQL+tMrBDgLmmIR2Au/8haoFAvPZ4t8CApKx4usOApXOxLQIApyxkusOAtau0d8BAoextusOAuTZ1t4CApOx5usOAvmY2HUCqN+itgIC/8eLtQ8C6vypqwUCq4ra9A4CkrG26w4C9ceLtQ8C9Me/tQ8C4Py1qgUC/8e/tQ8CvLjv6gsC0q65wAEC+ceftQ8CsriT6gsCwMfftA8Cz+PtgAUC6/z5qgUCxOPtgAUC0p+wbALE46GBBQL3x8O0DwL3x4e1DwK3lfyfAwL0x6O1DwL/mLx2AoiV5J8DAtGd3Z4MAurOwLQIAorUsbYBAtuurcABArGmiMAEAv2YqHYCiJXYnwMC1a7x3wECncD/3g8CyLTywQ4Ct6aAwAQC+JjwdQL9q5XpAQLIx5O1DwKeseLrDgLyx5O1DwK356aqBgLC4/WABQKe/IGqBQKe/PmqBQKEldifAwL+2Y7fAgL2x6e1DwLfrrXAAQL39YyrCAKTzsC0CALRnYmfDAL56rqABgLNtK7CDgLn6qqABgL5mNB1AoSx/usOAvjZgt8CAs2u+d8BAvTHw7QPAtvj0YAFAqucyZ4MAtOdpZ8MAtvjxYAFApLA994PApmVxJ8DArDUqbYBAv6YjHYCsqbgwAQClLH+6w4C687EtAgCjZX0nwMCq4ri9A4CrpzJngwC4fyZqgUCnLGe6w4CnvzxqgUC/9m63wICx669wAEChZWAnwMC8JiodgKOg431DQLrzvy0CALwmIR2Atauxd8BAoaV9J8DAur8jaoFAuyYjHYC4JjUdQLVrsXfAQKaseLrDgKinK2fDAKI1IG2AQLW3Ja1AgKinMGeDALrzsi0CAKo36q2AgKFsZ7rDgL/mIR2AouVkJ8DApb8vaoFApWx/usOAuXZvt8CAviYiHYCzrLj9AsC9LKa5g4C5sD0xwQC+NCVogqBw4yPibd7odKxrIy76rK7VUHcZA==|0|asyncPostBackControlIDs|||0|postBackControlIDs|||103|updatePanelIDs||tctl00$ContentPlaceHolder1$UpdatePanel1,tctl00$ContentPlaceHolder1$ucApplicationStatusView$UpdatePanel1|62|childUpdatePanelIDs||ctl00$ContentPlaceHolder1$ucApplicationStatusView$UpdatePanel1|38|panelsToRefreshIDs||ctl00$ContentPlaceHolder1$UpdatePanel1|2|asyncPostBackTimeout||90|19|formAction||Status.aspx?App=NIV|4|dataItem|ctl00_ContentPlaceHolder1_ucApplicationStatusView_anchorModalActivate|show|71|arrayDeclaration|Page_ValidationSummaries|document.getElementById("ctl00_ContentPlaceHolder1_ValidationSummary1")|69|arrayDeclaration|Page_Validators|document.getElementById("ctl00_ContentPlaceHolder1_CustomValidator1")|62|arrayDeclaration|Page_Validators|document.getElementById("ctl00_ContentPlaceHolder1_vldCaseNo")|213|scriptBlock|ScriptPath|/CEACStatTracker/ScriptResource.axd?d=v8nfTrcxwrzat704sUHdxPP0BolTQ8uAFEN_ITiSaMTHPgTZpT0AfBfSf6f4Y20T2h_11Hk2sl9Moiotnk9Oe6v6fOYGZAOfLWZruazVOaZC5RhPWlcwiDaQRixYAWl0pRcTbboNp8mV7oDWIyIRh-Lnv741&t=ffffffffac373f69|112|scriptBlock|ScriptPath|/CEACStatTracker/Status.aspx?_TSM_HiddenField_=ctl00_ToolkitScriptManager1_HiddenField&_TSM_CombinedScripts_=%3b|219|scriptStartupBlock|ScriptContentNoTags|
+        |0|hiddenField|__EVENTTARGET||0|hiddenField|__EVENTARGUMENT||0|hiddenField|__LASTFOCUS||156|hiddenField|__VIEWSTATE|/wEPaA8FDzhkMTA5OGUzZDA2YTNkYhgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRidG5TdWJtaXQxEKp9mG1QPYwoRscIU5TluK/MVA==|1880|hiddenField|__EVENTVALIDATION|/wEW6gEC1qHf4ggCuueB3QMCu8WcswoC3KrOwwYCxfTx9gIC1+6r8AoC9MfXtA8C5tme3wICkcD33g8C/tnu3wIC/pjUdQLE3KK2AgKUzuy0CAKBsebrDgLUneWfDAKJleyfAwKIpuzABAL6mIB2Av/Zit8CAqjRrcABAoWViJ8DAtGuscABAv6YhHYC4a3QtgQClLGy6w4C8ce7tQ8C662AtwQCyuP9gAUC7s6YtAgC9Nn63wIC7auJ6QECobiT6gsC/MfvtQ8C6c7AtAgC7quZ6QECn8DT3g8CgsD/3g8Csbjf6gsC4tme3wICvdSVtgEC/7Kr9AsCk8D33g8C46uV6QEC9seftQ8CkLHu6w4CvefmqQYChbHm6w4Csuf6qQYCvbiT6gsChLG26w4Csbif6gsC2bKb9AsC5q28twQCg8DH3g8C/bT+wQ4Ck7HS6g4C4a2ItwQCjpXwnwMCorj76gsCsLjr6gsCgc6wtAgC09zmtQIC+pjAdQKAwK/fDwKGldSfAwKeg+n1DQKriub0DgK5zbOsDwKpiqb1DgK7ir71DgLvmNR1Aq2c0Z4MAqWK/vQOAu/8/aoFAv3Hq7UPAqKcyZ4MAt7c1rUCAuSYrHYC7JiEdgKTzvi0CAKFlZCfAwL9x9e0DwLLx5e1DwKZldyfAwKAlcCfAwKN5+KpBgLm6paABgLl/PmqBQK/iuL0DgK91OW2AQKEwJveDwLcrsXfAQKP1KW2AQKhuPfqCwLE4+GABQKpnOWfDAKP586pBgLpzui0CAKvnL2fDALersnfAQKazsS0CALn6tqfBgLszsS0CALNx9e0DwLf3Mq1AgLd48GABQKAleSfAwL3x++1DwLIsrf0CwKbwP/eDwKq0dHfAQLw2ZLfAgKjiv70DgKw1PW2AQL+tMrBDgLmmIR2Au/8haoFAvPZ4t8CApKx4usOApXOxLQIApyxkusOAtau0d8BAoextusOAuTZ1t4CApOx5usOAvmY2HUCqN+itgIC/8eLtQ8C6vypqwUCq4ra9A4CkrG26w4C9ceLtQ8C9Me/tQ8C4Py1qgUC/8e/tQ8CvLjv6gsC0q65wAEC+ceftQ8CsriT6gsCwMfftA8Cz+PtgAUC6/z5qgUCxOPtgAUC0p+wbALE46GBBQL3x8O0DwL3x4e1DwK3lfyfAwL0x6O1DwL/mLx2AoiV5J8DAtGd3Z4MAurOwLQIAorUsbYBAtuurcABArGmiMAEAv2YqHYCiJXYnwMC1a7x3wECncD/3g8CyLTywQ4Ct6aAwAQC+JjwdQL9q5XpAQLIx5O1DwKeseLrDgLyx5O1DwK356aqBgLC4/WABQKe/IGqBQKe/PmqBQKEldifAwL+2Y7fAgL2x6e1DwLfrrXAAQL39YyrCAKTzsC0CALRnYmfDAL56rqABgLNtK7CDgLn6qqABgL5mNB1AoSx/usOAvjZgt8CAs2u+d8BAvTHw7QPAtvj0YAFAqucyZ4MAtOdpZ8MAtvjxYAFApLA994PApmVxJ8DArDUqbYBAv6YjHYCsqbgwAQClLH+6w4C687EtAgCjZX0nwMCq4ri9A4CrpzJngwC4fyZqgUCnLGe6w4CnvzxqgUC/9m63wICx669wAEChZWAnwMC8JiodgKOg431DQLrzvy0CALwmIR2Atauxd8BAoaV9J8DAur8jaoFAuyYjHYC4JjUdQLVrsXfAQKaseLrDgKinK2fDAKI1IG2AQLW3Ja1AgKinMGeDALrzsi0CAKo36q2AgKFsZ7rDgL/mIR2AouVkJ8DApb8vaoFApWx/usOAuXZvt8CAviYiHYCzrLj9AsC9LKa5g4C5sD0xwQC+NCVogpEqp1mIe9GgAUCUkFUvhIO8gmzdg==|0|asyncPostBackControlIDs|||0|postBackControlIDs|||185|updatePanelIDs||tctl00$ContentPlaceHolder1$UpdatePanel1,tctl00$ContentPlaceHolder1$ucApplicationStatusView$UpdatePanel1,tctl00$ContentPlaceHolder1$ucApplicationStatusView$ucApplicationList$UpdatePanel1|143|childUpdatePanelIDs||ctl00$ContentPlaceHolder1$ucApplicationStatusView$UpdatePanel1,ctl00$ContentPlaceHolder1$ucApplicationStatusView$ucApplicationList$UpdatePanel1|38|panelsToRefreshIDs||ctl00$ContentPlaceHolder1$UpdatePanel1|2|asyncPostBackTimeout||90|19|formAction||Status.aspx?App=NIV|71|arrayDeclaration|Page_ValidationSummaries|document.getElementById("ctl00_ContentPlaceHolder1_ValidationSummary1")|69|arrayDeclaration|Page_Validators|document.getElementById("ctl00_ContentPlaceHolder1_CustomValidator1")|62|arrayDeclaration|Page_Validators|document.getElementById("ctl00_ContentPlaceHolder1_vldCaseNo")|213|scriptBlock|ScriptPath|/CEACStatTracker/ScriptResource.axd?d=v8nfTrcxwrzat704sUHdxPP0BolTQ8uAFEN_ITiSaMTHPgTZpT0AfBfSf6f4Y20T2h_11Hk2sl9Moiotnk9Oe6v6fOYGZAOfLWZruazVOaZC5RhPWlcwiDaQRixYAWl0pRcTbboNp8mV7oDWIyIRh-Lnv741&t=ffffffffac373f69|112|scriptBlock|ScriptPath|/CEACStatTracker/Status.aspx?_TSM_HiddenField_=ctl00_ToolkitScriptManager1_HiddenField&_TSM_CombinedScripts_=%3b|219|scriptStartupBlock|ScriptContentNoTags|
 document.getElementById('ctl00_ContentPlaceHolder1_ValidationSummary1').dispose = function() {
     Array.remove(Page_ValidationSummaries, document.getElementById('ctl00_ContentPlaceHolder1_ValidationSummary1'));
 }
@@ -419,4 +434,4 @@ document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator1').dispose = 
 document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo').dispose = function() {
     Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo'));
 }
-|90|onSubmit||if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;|39|expando|document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator1')['controltovalidate']|"ctl00_ContentPlaceHolder1_ddlLocation"|32|expando|document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator1')['evaluationfunction']|"CustomValidatorEvaluateIsValid"|35|expando|document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo')['controltovalidate']|"ctl00_ContentPlaceHolder1_txbCase"|32|expando|document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo')['evaluationfunction']|"CustomValidatorEvaluateIsValid"|
+|90|onSubmit||if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;|39|expando|document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator1')['controltovalidate']|"ctl00_ContentPlaceHolder1_ddlLocation"|32|expando|document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator1')['evaluationfunction']|"CustomValidatorEvaluateIsValid"|35|expando|document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo')['controltovalidate']|"ctl00_ContentPlaceHolder1_txbCase"|40|expando|document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo')['errormessage']|"Invalid Application ID or Case Number."|7|expando|document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo')['isvalid']|"False"|32|expando|document.getElementById('ctl00_ContentPlaceHolder1_vldCaseNo')['evaluationfunction']|"CustomValidatorEvaluateIsValid"|

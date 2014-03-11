@@ -3,13 +3,21 @@ session_start();
 ob_start();
 include("autoload.php");
 $mainDAO =new MainDAO();
-$userId=$_REQUEST['userId'];;
+$userId=$_REQUEST['userId'];
 $title=$_REQUEST['title'];
 $blog=$_REQUEST['blog'];
-if($mainDAO->saveBlogs($userId,$title,$blog)){
-	$result="{success:true}";
+if($_REQUEST['id']>0){
+	if($mainDAO->updateBlog($_REQUEST)){
+		$result="{success:true}";
+	}else{
+		$result="{success:false}";
+	}	
 }else{
-	$result="{success:false}";
+	if($mainDAO->saveBlogs($userId,$title,$blog)){
+		$result="{success:true}";
+	}else{
+		$result="{success:false}";
+	}
 }
 echo $result;
 ?>

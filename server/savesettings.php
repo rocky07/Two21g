@@ -8,18 +8,18 @@ $email=$_REQUEST['email'];
 $token=$_REQUEST['token'];
 $userId=$_REQUEST['userId'];
 
-if($token==null || $token==""){
+if($userId==null || $userId==""){
 	$token=uniqid();		
 	if($userId=$mainDAO->saveSettings($name,$email,$token)){
-		$result="{'success':true,userId:'$userId',token:'$token',name:'$name',email:'$email'}";
+		$result="{'success':true,userId:'$userId',token:'$token',id:'$token',name:'$name',email:'$email'}";
 	}else{
 		$result="{'success':false}";
 	}
 }else{	
-	$updateFlag=$mainDAO->updateSettings($_REQUEST,$token);
+	$updateFlag=$mainDAO->updateSettings($_REQUEST,$userId);
 	if($updateFlag>0){
 		//$result="{success:true,guid:'$guid',name:'$name',email:'$email'}";
-		$result="{'success':true,token:'$token',name:'$name',email:'$email'}";
+		$result="{'success':true,userId:'$userId',token:'$token',id:'$token',name:'$name',email:'$email'}";
 	}else{
 		$result="{'success':false}";	
 	}	

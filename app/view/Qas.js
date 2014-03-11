@@ -1,6 +1,7 @@
 Ext.define("Two21G.view.Qas", {
     extend: 'Ext.List',
     xtype:'qas',
+    id:'qas',
     requires:['Ext.plugin.ListPaging'],
     config:{
             store:'Qas',

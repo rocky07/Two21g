@@ -1,9 +1,9 @@
-Ext.define('Two21G.view.NewBlog',{
+Ext.define('Two21G.view.NewQ',{
 	extend:'Ext.form.Panel',
-	xtype:'newblog',
-	title:'New Blog',
+	xtype:'newq',
+	title:'New Question',
 	config: {
-		title:'New Blog',
+		title:'New Question',
         items: [
 	        	{xtype:'fieldset',
 	        		items:[
