@@ -16,7 +16,8 @@ Ext.define("Two21G.view.Qas", {
 				    docked:'top',
 				    items:[
 				           {
-				           text:'Ask',
+				           //text:'Ask',
+				           iconCls:'add',
 				           action:'askQ'
 				           }
 				           ]

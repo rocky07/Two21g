@@ -11,22 +11,22 @@ Ext.define('Two21G.view.Main', {
         items: [
             {
             	title: 'Check Status',
-                iconCls: 'action',
+                iconCls: 'plane',
             	xtype:'statusform'
             },
             {
             	title: 'Blogs',
-                iconCls: 'star',
+                iconCls: 'pencil',
             	xtype:'blogs'
             },
             {
             	title: 'Q&As',
-                iconCls: 'star',
+                iconCls: 'chat2',
             	xtype:'qas'
             },
             {
             	title: 'Settings',
-                iconCls: 'settings',
+                iconCls: 'settings2',
             	xtype:'settings'
             }
             

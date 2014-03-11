@@ -109,7 +109,23 @@ Ext.define('Two21G.controller.Main', {
 		    		}).show();  
 	    	},
 	    	failure:function(response){
-	    		alert(JSON.stringify(response));
+	    		//alert(JSON.stringify(response));
+	    		Ext.create('Ext.Panel', { 
+	    		    height : 400, 
+	    		    width : 300,
+	    		    centered:true,		    		    
+	    		    //draggable : true,
+	    		    hideOnMaskTap:true,
+	    		    modal: true,
+	    		    html : JSON.stringify(response), 
+	    		    items : [ 
+	    		        { 
+	    		        xtype : 'toolbar', 
+	    		        docked : 'top', 
+	    		        title : 'Error' 
+	    		        } 
+	    		    ] 
+	    		}).show(); 
 	    		console.log(response);
 	    	}
     	});
@@ -127,7 +143,7 @@ Ext.define('Two21G.controller.Main', {
 				    docked:'top',
 				    items:[
 				           {
-				           text:'Edit',
+				           text:'Edit',				           
 				           itemId:'editBlog',
 				           action:'editBlog'
 				           }
@@ -176,7 +192,7 @@ Ext.define('Two21G.controller.Main', {
 		   				    docked:'top',
 		   				    items:[
 		   				           {
-		   				           text:'Edit',
+		   				           text:'Reply',
 		   				           action:'addAnswers'
 		   				           }
 		   				           ]
@@ -184,7 +200,7 @@ Ext.define('Two21G.controller.Main', {
 		                      ],
 		            styleHtmlContent:true,
 		            title: record.get('question'),		            
-		            itemTpl:'<div>{answer}</div>by{avatar}<br/><br/><br/>'
+		            itemTpl:'<div>{answer}</div><div><i>by {avatar},{created_date}</i></div><br/>'
 		            });
 				
     	    },
@@ -211,6 +227,7 @@ Ext.define('Two21G.controller.Main', {
     		success:function(response){
     			console.log(response.responseText);
     			me.pop();
+    			Ext.getStore('Blogs').load();
     		},
     		failure:function(){
     			console.log('server error');
@@ -278,7 +295,7 @@ Ext.define('Two21G.controller.Main', {
 	},
 	doLoadAnswersPanel:function(){
 		this.getMainPanel().push({xtype:'newanswers',
-			title:'Replays'
+			title:'Reply'
 			});
 	},
 	saveNewAnswers:function(btn){

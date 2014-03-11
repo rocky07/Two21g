@@ -1,10 +1,28 @@
+$body-bg-color: #000;
+ 
+$base-color: #333;
+$base-gradient: 'matte';
+$active-color: #B2DF1E;
+ 
+$tabs-dark: $base-color;
+$tabs-light: #555;
+ 
+$tabs-bottom-radius: .4em;
+$tabs-bottom-gradient: 'bevel';
+$tabs-bar-gradient: 'matte';
+$tabs-bottom-active-gradient: 'recessed';
+ 
+$toolbar-gradient: 'glossy';
 // The following two lines import the default Sencha Touch theme. If you are building
 // a new theme, remove them and the add your own CSS on top of the base CSS (which
 // is already included in your app.json file).
 @import 'sencha-touch/default';
 @import 'sencha-touch/default/all';
-$base-color: #333;
+
 // Custom code goes here..
 
 // Examples of using the icon mixin:
-// @include icon('user');
+@include icon('plane');
+@include icon('pencil');
+@include icon('chat2');
+@include icon('settings2');

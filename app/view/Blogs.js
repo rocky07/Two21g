@@ -11,7 +11,8 @@ Ext.define("Two21G.view.Blogs", {
                    docked:'top',
                    items:[
                           {
-                          text:'New Blog',
+                          //text:'New Blog',
+                          iconCls:'add',
                           action:'newBlog'
                           }
                           ]
