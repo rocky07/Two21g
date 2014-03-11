@@ -1,0 +1,162 @@
+-- MySQL dump 10.13  Distrib 5.5.32, for debian-linux-gnu (i686)
+--
+-- Host: localhost    Database: two21g
+-- ------------------------------------------------------
+-- Server version	5.5.32-0ubuntu0.12.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `answers`
+--
+
+DROP TABLE IF EXISTS `answers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `answers` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL,
+  `question_id` mediumtext,
+  `answer` text,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `voteup` mediumtext,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `answers`
+--
+
+LOCK TABLES `answers` WRITE;
+/*!40000 ALTER TABLE `answers` DISABLE KEYS */;
+INSERT INTO `answers` VALUES (1,1,'1','2 months ','0000-00-00 00:00:00','1'),(2,1,'1','4 months ','0000-00-00 00:00:00','1'),(3,94,'1',NULL,'2014-03-01 10:20:05',NULL),(4,94,'1',NULL,'2014-03-01 10:23:20',NULL),(5,94,'1',NULL,'2014-03-01 10:30:34',NULL),(6,94,'1',' nk','2014-03-01 10:32:58',NULL),(7,94,'2','kl','2014-03-01 10:42:38',NULL),(8,94,'2','kllk','2014-03-01 10:42:42',NULL),(9,0,'1','xx;','2014-03-07 17:44:55',NULL),(10,0,'1','s','2014-03-07 18:13:19',NULL),(11,0,'1','xcz','2014-03-07 18:15:04',NULL),(12,0,'18','mz','2014-03-09 08:08:24',NULL),(13,0,'19','jjl','2014-03-09 08:25:01',NULL),(14,0,'1',',cx','2014-03-09 12:01:48',NULL),(15,121,'19','Zc','2014-03-09 12:02:20',NULL),(16,121,'19','new tr','2014-03-09 12:02:37',NULL),(17,0,'1','mm','2014-03-11 18:44:21',NULL);
+/*!40000 ALTER TABLE `answers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `blogs`
+--
+
+DROP TABLE IF EXISTS `blogs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `blogs` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  `avatar` bigint(20) DEFAULT NULL,
+  `blog` text,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `blogs`
+--
+
+LOCK TABLES `blogs` WRITE;
+/*!40000 ALTER TABLE `blogs` DISABLE KEYS */;
+INSERT INTO `blogs` VALUES (1,'what is 221g?',1,'<h1>header<h1><p>para</p>','2014-02-09 07:57:22'),(2,'what is 214b?',1,'<h1>header 2<h1><p>para</p><p>para 2</p>','2014-02-09 07:57:43'),(3,NULL,1,NULL,'2014-02-11 19:55:52'),(8,'due',83,'dude','2014-02-26 15:18:05'),(9,'ssda',86,'xz','2014-02-27 18:08:40'),(10,'j',0,'jj','2014-03-07 18:04:47'),(11,'nnn',0,'j','2014-03-07 18:05:19'),(12,'x',0,'xcc','2014-03-07 18:12:56'),(13,'sda',0,'sada','2014-03-07 18:16:36'),(14,'rakesh',106,'rakesh','2014-03-07 18:19:03'),(15,'TEST',116,'RAKESH TEST','2014-03-07 18:47:14'),(16,'popy',117,'pop','2014-03-11 18:25:26'),(17,'rkaej',0,'asd','2014-03-09 08:07:02'),(18,'TEST',0,'RAKESH TEST mk','2014-03-11 18:07:11'),(19,'my blog',0,'my blog','2014-03-11 18:11:01'),(20,'my blog',0,'my blog','2014-03-11 18:12:28');
+/*!40000 ALTER TABLE `blogs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `comments`
+--
+
+DROP TABLE IF EXISTS `comments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `comments` (
+  `id` mediumtext,
+  `avatar` mediumtext,
+  `answer_id` mediumtext,
+  `comments` text,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `voteup` mediumtext
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `comments`
+--
+
+LOCK TABLES `comments` WRITE;
+/*!40000 ALTER TABLE `comments` DISABLE KEYS */;
+INSERT INTO `comments` VALUES ('1','1','1','it varies on individual casses ','0000-00-00 00:00:00','1'),('2','1','1','yea he is right ','0000-00-00 00:00:00','1'),('3','1','2','may be ','0000-00-00 00:00:00','1'),('4','1','2','not sure ','0000-00-00 00:00:00','1');
+/*!40000 ALTER TABLE `comments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `questions`
+--
+
+DROP TABLE IF EXISTS `questions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `questions` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `userid` mediumtext,
+  `question` text,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `voteup` mediumtext,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `questions`
+--
+
+LOCK TABLES `questions` WRITE;
+/*!40000 ALTER TABLE `questions` DISABLE KEYS */;
+INSERT INTO `questions` VALUES (1,'1','What is the avg wait times for 221g administrative processing?','0000-00-00 00:00:00','1'),(2,'87','sdds','2014-02-28 02:38:21',NULL),(4,'0','SDSFSD','2014-03-01 12:22:44',NULL),(5,'105','a new question ??','2014-03-07 17:45:47',NULL),(6,'0','xczcv','2014-03-07 17:46:11',NULL),(7,'0','ccx','2014-03-07 17:48:53',NULL),(8,'0','ccx','2014-03-07 17:49:01',NULL),(9,'0','as','2014-03-07 17:50:48',NULL),(10,'0','k','2014-03-07 17:56:08',NULL),(11,'0','k','2014-03-07 18:09:41',NULL),(12,'0','xc','2014-03-07 18:10:34',NULL),(13,'0','s','2014-03-07 18:13:12',NULL),(14,'0','ssds','2014-03-07 18:21:07',NULL),(15,'0','axdd','2014-03-07 18:33:22',NULL),(16,'0','new question ??','2014-03-07 18:47:48',NULL),(17,'0','once more ..?','2014-03-07 18:48:02',NULL),(18,'117','my question.?','2014-03-07 18:49:01',NULL),(19,'117','question again ..?','2014-03-07 18:49:41',NULL);
+/*!40000 ALTER TABLE `questions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `userid` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) DEFAULT NULL,
+  `token` varchar(20) DEFAULT NULL,
+  `avatar` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`userid`)
+) ENGINE=InnoDB AUTO_INCREMENT=122 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'rakeshr.21@gmail.com','a','rakesh'),(52,'sakina.kanorwala@gmail.com',NULL,'sakina'),(53,'rakeshr.21@gmail.com',NULL,'rakeshqw'),(54,'rakeshr.21@gmail.com',NULL,'rakesh'),(55,NULL,NULL,NULL),(56,'rakeshr.21@gmail.com',NULL,'rakesh12'),(57,'rakeshr.21@gmail.com',NULL,'rakeshasas'),(58,'rakeshr.21@gmail.com',NULL,'rakesj'),(59,'rakeshr.21@gmail.com',NULL,'rakeshr'),(60,'as',NULL,'ann'),(61,'as',NULL,'ravan'),(62,'as',NULL,'sda'),(63,'s',NULL,'rak'),(64,'dsf',NULL,'frsd'),(65,'dsf','530ccecdbf52e','frsdy'),(66,'cz','530cd0d990707','asss'),(67,'cz','530cd1013eb82','asss'),(68,'cz','530cd10e2028b','asss'),(69,'cz','530cd154cc068','asss'),(70,'as','530cd165de4aa','zx'),(71,'zxxx','530cd1921bf40','sda'),(72,'zxxx','530cd1d2be78e','sda'),(73,'sa','530cd1f13297d','as'),(74,'x','530cd27420567','d'),(75,'ds','530cd5113d33b','sd'),(76,'zx','530cd5507821c','zxx'),(77,'zx','530cd57728854','zxx'),(78,'as','530cd6788f165','s'),(79,'as','530cd6f3a2501','s'),(80,'rakeshr.21@gmail.com','530e027342e35','rakesh'),(81,'rakeshr.21@gmail.com','530e041ce1d35','rakesh'),(82,'rakeshr.21@gmail.com','530e04a28bcfe','rakesh'),(83,'rokku','530e0597afe90','rokku'),(84,'sdas','530e2af482d3d','sdas'),(85,'rakeshr.21@gmail.com','530f7f099e6f6','rakesh'),(86,'wq','530f7f1b533c4','wq'),(87,'s','530ff65f8249d','sd'),(88,'ssa','5311aca00fcd1','sas'),(89,'zx','5311accce5f59','sd'),(90,'a','5311af47b2c76','as'),(91,'XZ','5311afa66fdef','XZ'),(92,'s','5311b2ec46695','s'),(93,'as','5311b3b2e9a27','asas'),(94,'as','5311b3fe31dae','as'),(95,'w','5311be6fe8bf9','wqesdfsdsd'),(96,'w','5311ccc601f2d','wqesdfsdsd'),(97,'rakesh@test.com','5311ccdd51102','rakesh'),(98,'rakesh@test.com','5311ccea87184','rakesh'),(99,'wk','5311cdcebca77','wqesdfsdsd'),(100,'wasas','5311ce54c28fe','wqesdfsdsd'),(101,'w','5311cf0f75cb1','wqesdfsdsd'),(102,'w','5311cf8018a6f','wqesdfsdsd'),(103,'wasa','5311cfce93da2','wqesdfsdsd'),(104,'wasa','5311cfe3eea2f','wqesdfsdsd'),(105,'w','531a05ba96361','wqesdfsdsd'),(106,'w','531a0d8238fb3','x'),(107,'w','531a11c7f1cda','wqesdfsdsd'),(108,'w','531a11dae716d','wqesdfsdsd'),(109,'w','531a12da0f482','wqesdfsdsd'),(110,'w','531a12eb82096','wqesdfsdsd'),(111,'w','531a132dd1be5','wqesdfsdsd'),(112,'w','531a134c662a1','wqesdfsdsd'),(113,'w','531a139d96ea1','wqesdfsdsd'),(114,'wsa','531a13c163954','wqesdfsdsd'),(115,'wADAS','531a13f58bd01','wqesdfsdsd'),(116,'w','531a141fa148c','wqesdfsdsd'),(117,'w','531a14921ee13','wqesdfsdsd'),(118,'ramesan.rakesh@gmail.com','531a16d97910e','rakesh'),(119,'w','531ab098b1f64','wqesdfsdsd'),(120,'','531c2074a1c28','anonymous'),(121,'w','531c583445d1b','wqesdfsdsd');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2014-03-11 14:42:49
