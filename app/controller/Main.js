@@ -169,7 +169,7 @@ Ext.define('Two21G.controller.Main', {
     	this.questionId=record.get('id');
     	var me=this;
     	Ext.Ajax.request({
-    		url:'server/listanswers.php',    		    
+    		url:'http://usvisastatus.in/listanswers.php',    		    
     		method: 'POST',
     	    params: {
     			questionId:record.get('id')
@@ -179,7 +179,7 @@ Ext.define('Two21G.controller.Main', {
 				me.getMainPanel().push({
 		            xtype:'dataview',		            
 		            store:{
-						fields:['id','avatar','answer'],
+						fields:['id','avatar','answer','created_date'],
 						data:responseData
 							},
 		            scrollable: {
@@ -200,7 +200,7 @@ Ext.define('Two21G.controller.Main', {
 		                      ],
 		            styleHtmlContent:true,
 		            title: record.get('question'),		            
-		            itemTpl:'<div>{answer}</div><div><i>by {avatar},{created_date}</i></div><br/>'
+		            itemTpl:'<div>{answer}</div><div><i>by {avatar},{created_date:date("n/j/Y")}</i></div><br/>'
 		            });
 				
     	    },
@@ -220,7 +220,7 @@ Ext.define('Two21G.controller.Main', {
     	var formPanel=btn.up('panel');    	
     	var userId=Ext.getStore('Settings').getAt(0).get('userId')
     	formPanel.submit({
-    		url:'server/saveblog.php',
+    		url:'http://usvisastatus.in/saveblog.php',
     		params:{
     			userId:userId
     		},
@@ -243,7 +243,7 @@ Ext.define('Two21G.controller.Main', {
 	doSaveSettings:function(btn){
 		var formPanel=btn.up('panel');
 		formPanel.submit({
-		    url: 'server/savesettings.php',
+		    url: 'http://usvisastatus.in/savesettings.php',
 		    method: 'POST',
 		    success: function(response,data) {
 				responseObj=data;				
@@ -278,7 +278,7 @@ Ext.define('Two21G.controller.Main', {
 		var formPanel=btn.up('panel');    	
     	var userId=Ext.getStore('Settings').getAt(0).get('userId');
     	formPanel.submit({
-    		url:'server/savenewq.php',
+    		url:'http://usvisastatus.in/savenewq.php',
     		params:{
     			userId:userId
     		},
@@ -304,14 +304,14 @@ Ext.define('Two21G.controller.Main', {
 		var formPanel=btn.up('panel');    	
     	var userId=Ext.getStore('Settings').getAt(0).get('userId');
     	formPanel.submit({
-    		url:'server/savenewanswers.php',
+    		url:'http://usvisastatus.in/savenewanswers.php',
     		params:{
     			userId:userId,
     			questionId:questionId
     		},
     		success:function(response){
-    			console.log(response.responseText);
-    			me.pop();
+    			console.log(response.responseText);    			
+    			me.pop(2);    			
     		},
     		failure:function(){
     			console.log('server error');

@@ -6,7 +6,7 @@ Ext.define('Two21G.store.Qas', {
          autoLoad: true,
          proxy: {
          type: 'ajax',
-         url : 'http://localhost/Two21G/server/qas.php',
+         url : 'http://usvisastatus.in/qas.php',
          reader: {
 	         type: 'json'
 	         }

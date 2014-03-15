@@ -6,7 +6,7 @@ Ext.define('Two21G.store.Blogs', {
          autoLoad: true,
          proxy: {
          type: 'ajax',
-         url : 'http://localhost/Two21G/server/listblogs.php',
+         url : 'http://usvisastatus.in/listblogs.php',
          reader: {
 	         type: 'json'
 	         }
