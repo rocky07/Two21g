@@ -4,6 +4,7 @@ Ext.define('Two21G.model.Blogs', {
         fields: [
             { name: 'id', type: 'int' },
             { name: 'avatar', type: 'auto' },
+            { name: 'userId', type: 'int',mapping:'userid' },
             { name: 'title', type: 'auto' },
             { name: 'blog', type: 'auto' } ,
             { name: 'date_created', type: 'auto' }

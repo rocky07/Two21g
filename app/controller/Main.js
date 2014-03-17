@@ -160,9 +160,12 @@ Ext.define('Two21G.controller.Main', {
             html:record.get('blog')
             });
     		//hides the edit button for non blog owners
-	    	if(Two21G.app.userId!=record.get('avatar')){
-	    		Ext.ComponentQuery.query('button[itemId="editBlog"]')[0].hide()
-	    	}
+    		var settings=Ext.getStore('Settings').getAt(0);
+    		if(settings){    		
+		    	if(settings.get('userId')!=record.get('userId')){
+		    		Ext.ComponentQuery.query('button[itemId="editBlog"]')[0].hide()
+		    	}
+    		}
 			//this.getBlogDetails().setData(record.getData())
     },
     showAnswers:function(list,record){
@@ -250,8 +253,13 @@ Ext.define('Two21G.controller.Main', {
 		        if(responseObj.success){
 		        	var store=Ext.getStore('Settings');
 		    		if(Ext.getStore('Settings').getAt(0)){
-		    			items=Ext.getStore('Settings').getAt(0).getData();
-		    			Ext.getStore('Settings').getAt(0).data=data;
+		    			settings=Ext.getStore('Settings').getAt(0);
+		    			settings.set('userId',data.userId);
+		    			settings.set('name',data.name);
+		    			settings.set('email',data.email);
+		    			settings.set('token',data.token);
+		    			//Ext.getStore('Settings').getAt(0).data=data;
+		    			
 		    		}else{
 		    			store.add(data);	
 		    		}		    				

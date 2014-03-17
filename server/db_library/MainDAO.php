@@ -593,7 +593,7 @@ function fetchBlogById($id)
 		}
 function fetchAllBlogs($start,$limit)
 	{
-		$qry	=	"select *,users.avatar from blogs inner join users where blogs.avatar=users.userid  order by date_created desc LIMIT ?,?";
+		$qry	=	"select *,users.avatar,users.userid from blogs inner join users where blogs.avatar=users.userid  order by date_created desc LIMIT ?,?";
 		$param	=	array("ii",$start,$limit);
 		$records	=	$this->fetchAll($qry,$param);
 		return $records;
